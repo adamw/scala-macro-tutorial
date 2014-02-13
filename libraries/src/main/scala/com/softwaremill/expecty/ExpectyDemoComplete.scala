@@ -1,8 +1,8 @@
-package com.softwaremill
+package com.softwaremill.expecty
 
 import org.expecty.Expecty
 
-object ExpectyDemo extends App {
+object ExpectyDemoComplete extends App {
   case class Name(firstName: String, lastName: String)
   case class Person(name: Name, age: Int) {
     def introduceTo(otherName: Name) = "Hello, " + otherName.firstName

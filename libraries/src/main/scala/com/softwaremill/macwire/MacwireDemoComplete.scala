@@ -1,6 +1,6 @@
-package com.softwaremill
+package com.softwaremill.macwire
 
-object MacwireDemo extends App {
+object MacwireDemoComplete extends App {
   // Case classes so that we have nice toString()
   case class DatabaseAccess()
   case class SecurityFilter()
