@@ -22,6 +22,7 @@ object ScalaMacroTutorialBuild extends Build {
   val async = "org.scala-lang.modules" %% "scala-async" % "0.9.0-M4"
   val pickling = "org.scala-lang" %% "scala-pickling" % "0.8.0-SNAPSHOT"
   val akka = "com.typesafe.akka" %% "akka-actor" % "2.2.3"
+  val akkaChannels = "com.typesafe.akka" %% "akka-channels-experimental" % "2.2.3"
 
   lazy val root: Project = Project(
     "root",
@@ -49,7 +50,7 @@ object ScalaMacroTutorialBuild extends Build {
     "libraries",
     file("libraries"),
     settings = buildSettings ++ Seq(
-      libraryDependencies ++= Seq(expecty, macwire, slick, h2, async, pickling, akka),
+      libraryDependencies ++= Seq(expecty, macwire, slick, h2, async, pickling, akka, akkaChannels),
       libraryDependencies <+= (scalaVersion)("org.scala-lang" % "scala-compiler" % _), // for slick
       resolvers += Resolver.sonatypeRepo("snapshots"))
   )
