@@ -2,7 +2,7 @@ package com.softwaremill
 
 import language.experimental.macros
 
-import reflect.macros.Context
+import reflect.macros.blackbox.Context
 
 object Step3Complete {
   def debug(param: Any): Unit = macro debug_impl

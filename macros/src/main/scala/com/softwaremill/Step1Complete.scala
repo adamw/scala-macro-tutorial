@@ -4,7 +4,7 @@ package com.softwaremill
 import language.experimental.macros
 
 // Normal imports
-import reflect.macros.Context
+import reflect.macros.blackbox.Context
 
 object Step1Complete {
   def hello(): Unit = macro hello_impl

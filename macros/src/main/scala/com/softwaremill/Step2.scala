@@ -2,7 +2,7 @@ package com.softwaremill
 
 import language.experimental.macros
 
-import reflect.macros.Context
+import reflect.macros.blackbox.Context
 
 object Step2 {
   def myPrintln(param: Any): Unit = macro myPrintln_impl
